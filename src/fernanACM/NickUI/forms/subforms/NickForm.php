@@ -24,7 +24,7 @@ class NickForm{
         $form = new CustomForm(function(Player $player, $data){
             if($data !== null){
                 if(strlen($data[0]) < Loader::getInstance()->config->getNested("Settings.characters", 10)){
-                    if(!in_array($data[0], Loader::getInstance()->config->getNested("Settings.not-allow-custom-nicks"))){
+                    //if(!in_array($data[0], Loader::getInstance()->config->getNested("Settings.not-allow-custom-nicks"))){
                         if(!empty($data[0])){
                             Loader::getInstance()->nick->setNested($player->getName() . ".custom-name", $data[0]);
                             Loader::getInstance()->nick->setNested($player->getName() . ".normal-name", $player->getName());
@@ -39,11 +39,11 @@ class NickForm{
                             $player->sendMessage($prefix . Loader::getInstance()->getMessage($player, "Messages.Nick.error-line"));
                             PluginUtils::PlaySound($player, "mob.villager.no", 1, 1);
                         }
-                    }else{
+                    /*}else{
                         $prefix = Loader::getInstance()->getMessage($player, "Prefix");
                         $player->sendMessage($prefix . Loader::getInstance()->getMessage($player, "Messages.Nick.not-allowed-nick"));
                         PluginUtils::PlaySound($player, "mob.villager.no", 1, 1);
-                    }   
+                    }*/
                 }else{
                     $prefix = Loader::getInstance()->getMessage($player, "Prefix");
                     $player->sendMessage($prefix . Loader::getInstance()->getMessage($player, "Messages.error-characters"));
