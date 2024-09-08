@@ -30,10 +30,10 @@ class NickCommand extends BaseCommand{
     
     protected function prepare(): void{
         $this->setPermission("nickui.acm");
-        $this->registerSubCommand(new SetSubCommand("set", "Change your nick with one command."));
-        $this->registerSubCommand(new RandomSubCommand("random", "Change your name to a random nick with one command."));
-        $this->registerSubCommand(new ResetSubCommand("reset", "Return your nick to normal with one command."));
-        $this->registerSubCommand(new HelpSubCommand("help", "Plugin command list."));
+        $this->registerSubCommand(new SetSubCommand(Loader::getInstance(), "set", "Change your nick with one command."));
+        $this->registerSubCommand(new RandomSubCommand(Loader::getInstance(), "random", "Change your name to a random nick with one command."));
+        $this->registerSubCommand(new ResetSubCommand(Loader::getInstance(), "reset", "Return your nick to normal with one command."));
+        $this->registerSubCommand(new HelpSubCommand(Loader::getInstance(), "help", "Plugin command list."));
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void{
