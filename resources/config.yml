@@ -8,26 +8,8 @@
 
 # =======(SETTINGS)=======
 Settings:
-  # Write here nicknames that you do not like or are risque
-  # add the banned nicknames with the following example:
-  # Not-allow-custom-nicks:
-  #  - Shit
-  #  - Fuck
-  #  - Bitch
-  not-allow-custom-nicks:
-    - "Gay"
-    - "HomoSexual"
-    - "PocketMine-MP"    
-    - "sucks"    
-    - "FUCK"    
-    - "bitch"
-    - "pmmp"
-    - "Servidor"
-    - "Console"
-    - "NickUI"
-    
   # Put the maximum characters for the nicks
-  characters: 10
+  characters: 15
   # Add random nicknames with this example:
   # Random-nicks:
   #   - Friend
