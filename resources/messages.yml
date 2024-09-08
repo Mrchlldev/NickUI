@@ -46,7 +46,7 @@ Menu:
 Nick-menu:
   title: "{BOLD}{PINK}NickUI{GREEN} - {PINK}Change"
   content: "{YELLOW}Write your nickname here:"
-  input: "ACM-PocketMine-MP"
+  input: "Mrchlldev"
   
 # Chat messages
 Messages:
